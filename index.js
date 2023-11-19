@@ -27,6 +27,51 @@
 // let soLuong = demSoLuongPhanTu(mang, giaTriCanDem);
 // console.log(`Số lượng phần tử có giá trị bằng ${giaTriCanDem} trong mảng là: ${soLuong}`);
 
+// BT3
+// let mang = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// function isPrime(num) {
+//     if (num < 2) {
+//         return false;
+//     }
+//     for (let i = 2; i <= Math.sqrt(num); i++) {
+//         if (num % i === 0) {
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+//
+// const primeNumbers = [];
+// let totalPrimeSum = 0;
+// mang.forEach(num => {
+//     if (isPrime(num)) {
+//         primeNumbers.push(num);
+//         totalPrimeSum += num;
+//     }
+// });
+// console.log("Các số nguyên tố trong mảng:", primeNumbers);
+// console.log("Tổng các số nguyên tố trong mảng:", totalPrimeSum);
 
+// BT4
+function isPrime(num) {
+    if (num < 2) {
+        return false;
+    }
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
 
+let totalPrimeSum = 0;
+
+for (let i = 2; i < 500; i++) {
+    if (isPrime(i)) {
+        totalPrimeSum += i;
+    }
+}
+
+console.log("Tổng các số nguyên tố nhỏ hơn 500:", totalPrimeSum);
 
